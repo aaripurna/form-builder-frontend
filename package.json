@@ -1,0 +1,41 @@
+{
+  "name": "form-builder-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for FormBuilder ruby gem",
+  "main": "index.js",
+  "repository": "https://github.com/aaripurna/form-builder-frontend.git",
+  "author": "Nawa Aripurna",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-export-default-from": "^7.10.1",
+    "@babel/plugin-transform-arrow-functions": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "sugarss": "^2.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}
