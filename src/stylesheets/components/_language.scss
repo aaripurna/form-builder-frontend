@@ -1,0 +1,26 @@
+.language {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    margin-left: 38px;
+  }
+
+  &__item {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 16px;
+    opacity: 0.4;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

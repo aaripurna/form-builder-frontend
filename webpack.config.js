@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const uglifyJsPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -28,7 +29,11 @@ module.exports = {
       },
       {
         test: /\.(sc|sa|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+          'resolve-url-loader'
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -39,6 +44,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new uglifyJsPlugin(),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     new HtmlWebpackPlugin({
